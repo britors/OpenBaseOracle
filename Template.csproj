@@ -17,7 +17,11 @@
     <PackageIcon>icon.png</PackageIcon>
     <PackageProjectUrl>https://github.com/britors/OpenBaseOracle</PackageProjectUrl>
     <PackageReleaseNotes>
-    - Atualização de pacotes nuget
+    - Template inicial OpenBaseNET para Oracle
+    - Driver Oracle.ManagedDataAccess.Core (ODP.NET)
+    - Provider Oracle.EntityFrameworkCore
+    - Resiliência com OracleExceptionPredicate (códigos ORA-*)
+    - Connection string no formato EZConnect
     </PackageReleaseNotes>
   </PropertyGroup>
   <ItemGroup>
