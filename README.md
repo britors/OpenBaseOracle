@@ -1,12 +1,12 @@
-# OpenBaseNET PostgreSQL Template
+# OpenBaseNET Oracle Template
 
 ![.Net](https://img.shields.io/badge/.NET-5C2D91?style=for-the-badge&logo=.net&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
+![Oracle](https://img.shields.io/badge/Oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white)
 
-> OpenBaseNET for PostgreSQL is a template for .NET 10 projects using a PostgreSQL database.
+> OpenBaseNET for Oracle is a template for .NET 10 projects using an Oracle database.
 
 The template was built to address the need to create projects quickly and efficiently.
-A .NET project template to accelerate API development, pre-configured with Clean Architecture, Entity Framework Core, and PostgreSQL.
+A .NET project template to accelerate API development, pre-configured with Clean Architecture, Entity Framework Core, and Oracle.
 
 ## About the Project
 
@@ -29,11 +29,11 @@ The template uses Clean Architecture principles to clearly separate responsibili
 ### Main Technologies
 
 * **.NET 10**
-* **Entity Framework Core 10**
-* **Npgsql - PostgreSQL provider for .NET**
+* **Entity Framework Core**
+* **Oracle.ManagedDataAccess.Core (ODP.NET) - Oracle provider for .NET**
 * **Clean Architecture**
 * **Repository Pattern**
-* **PostgreSQL-ready**
+* **Oracle-ready**
 
 ---
 
@@ -44,7 +44,7 @@ To create a new project from this template, follow the steps below.
 ### Prerequisites
 
 * [.NET SDK](https://dotnet.microsoft.com/download) (version 10.0 or higher).
-* [PostgreSQL](https://www.postgresql.org/download/) installed and configured.
+* [Oracle Database](https://www.oracle.com/database/) installed and configured (Oracle XE, Standard, or Enterprise).
 
 ### 1. Database Configuration
 
@@ -53,10 +53,12 @@ Configure your connection string in the `appsettings.json` or `appsettings.Devel
 ```json
 {
   "ConnectionStrings": {
-    "OpenBasePostgres": "Host=localhost;Port=5432;Database=OpenBaseNet;Username=postgres;Password=your_password"
+    "OpenBaseOracle": "Data Source=localhost:1521/XEPDB1;User Id=openbase;Password=your_password;"
   }
 }
 ```
+
+> **Tip:** The `Data Source` uses Oracle EZConnect format: `host:port/service_name`.
 
 ### 2. Running the Project
 
@@ -73,8 +75,8 @@ It is not required to run your project — it serves only as a guide and can be 
 
 ## 📦 Main Packages
 
-- **Npgsql** - PostgreSQL data provider for .NET
-- **Npgsql.EntityFrameworkCore.PostgreSQL** - Entity Framework Core provider for PostgreSQL
+- **Oracle.ManagedDataAccess.Core** - Oracle ODP.NET managed driver for .NET
+- **Oracle.EntityFrameworkCore** - Entity Framework Core provider for Oracle
 - **Entity Framework Core** - ORM for data access
 - **Dapper** - Micro ORM for high-performance queries
 - **MediatR** - Mediator pattern implementation
