@@ -6,7 +6,7 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="10.0.7" />
-    <PackageReference Include="Oracle.EntityFrameworkCore" Version="9.23.130" />
+    <PackageReference Include="Oracle.EntityFrameworkCore" Version="9.23.26000" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\OpenBaseNET.Domain\OpenBaseNET.Domain.csproj" />
