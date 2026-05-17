@@ -49,6 +49,6 @@ jobs:
           FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true 
         shell: powershell
         run: |
-          ${{ runner.temp }}\scanner\dotnet-sonarscanner begin /k:"britors_OpenBaseNETPostgres" /o:"britors" /d:sonar.token="$env:SONAR_TOKEN"
-          dotnet build OpenBasePgsql.sln
-          ${{ runner.temp }}\scanner\dotnet-sonarscanner end /d:sonar.token="$env:SONAR_TOKEN"
+          ${{ runner.temp }}\scanner\dotnet-sonarscanner begin /k:"britors_OpenBaseOracle" /o:"britors" /d:sonar.token="${{ secrets.SONAR_TOKEN }}"
+          dotnet build OpenBaseOracle.sln
+          ${{ runner.temp }}\scanner\dotnet-sonarscanner end /d:sonar.token="${{ secrets.SONAR_TOKEN }}"
